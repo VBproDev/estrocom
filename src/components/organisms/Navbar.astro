@@ -8,7 +8,7 @@ import Button from "../atoms/Button.astro";
 
 <div class="sticky top-0 z-10 w-full bg-gray-100 min-h-fit">
   <nav
-    class="top-nav relative mx-auto flex w-[70%] min-w-[325px] max-h-[10vh] items-center justify-between border-b border-black/20"
+    class="top-nav relative mx-auto flex w-[70%] min-w-[325px] max-h-[10vh] items-center justify-between border-b border-black/20 py-[clamp(5px,1vw,10px)]"
     aria-label="Main navigation"
   >
     <a href="/" class="flex items-center" aria-label="Home">
@@ -57,7 +57,7 @@ import Button from "../atoms/Button.astro";
 </div>
 <Modal id="cart">
   <div
-    class="cart-wrapper"
+    class="cart-wrapper absolute top-[90px] right-4 left-4 md:w-[400px] md:right-[150px] md:left-auto rounded-lg bg-white shadow-[0_4px_16px_rgba(0,0,0,0.15)] flex flex-col max-h-[80vh] animate-[slideIn_0.3s_ease-out]"
     role="dialog"
     aria-labelledby="cart-title"
     aria-modal="true"
@@ -81,7 +81,7 @@ import Button from "../atoms/Button.astro";
 
     <div
       id="cart-items-container"
-      class="cart-items-scrollable flex flex-col flex-1 gap-0 overflow-y-auto px-6 py-4 min-h-[150px] max-h-[400px]"
+      class="cart-items-scrollable flex flex-col flex-1 gap-0 overflow-y-auto px-6 py-4 min-h-[150px] max-h-[400px] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#d0d0d0] [&::-webkit-scrollbar-thumb]:rounded [&::-webkit-scrollbar-thumb:hover]:bg-[#b0b0b0]"
       role="list"
       aria-label="Cart items"
     >
@@ -133,151 +133,76 @@ import Button from "../atoms/Button.astro";
   </div>
 </Modal>
 
-<style lang="sass">
-  @keyframes slideIn
-    from
-      opacity: 0
-      transform: translateY(-10px)
-    to
-      opacity: 1
-      transform: translateY(0)
+<style>
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-  @keyframes fadeIn
-    from
-      opacity: 0
-      transform: translateY(5px)
-    to
-      opacity: 1
-      transform: translateY(0)
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-  .cart-wrapper
-    border-radius: 8px
-    background: white
-    position: absolute
-    top: 90px
-    right: 1rem
-    left: 1rem
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15)
-    display: flex
-    flex-direction: column
-    max-height: 80vh
-    animation: slideIn 0.3s ease-out
+  .cart-item {
+    @apply flex justify-between items-center w-full py-4 border-b border-gray-100 animate-[fadeIn_0.3s_ease] gap-3;
+  }
 
-    @media only screen and (min-width: 768px)
-      width: 400px
-      right: 150px
-      left: auto
+  .cart-item:last-child {
+    @apply border-b-0;
+  }
 
-  .top-nav
-    padding-top: clamp(5px, 1vw, 10px)
-    padding-bottom: clamp(5px, 1vw, 10px)
+  .cart-item-info {
+    @apply flex gap-4 items-center flex-1 min-w-0;
+  }
 
-  .cart-items-scrollable
-    &::-webkit-scrollbar
-      width: 6px
-    &::-webkit-scrollbar-track
-      background: transparent
-    &::-webkit-scrollbar-thumb
-      background: #d0d0d0
-      border-radius: 3px
-      &:hover
-        background: #b0b0b0
+  .cart-item-image {
+    @apply w-16 h-auto object-cover rounded-lg bg-gray-100 flex-shrink-0;
+  }
 
-  .cart-item
-    display: flex
-    justify-content: space-between
-    align-items: center
-    width: 100%
-    padding: 1rem 0
-    border-bottom: 1px solid #f1f1f1
-    animation: fadeIn 0.3s ease
-    gap: 12px
+  .cart-item-details {
+    @apply flex flex-col gap-1 flex-1 min-w-0;
+  }
 
-    &:last-child
-      border-bottom: none
+  .cart-item-name {
+    @apply font-bold text-[15px] overflow-hidden text-ellipsis whitespace-nowrap;
+  }
 
-    &-info
-      display: flex
-      gap: 16px
-      align-items: center
-      flex: 1
-      min-width: 0
+  .cart-item-price {
+    @apply text-black/50 text-sm;
+  }
 
-    &-image
-      width: 64px
-      height: auto
-      object-fit: cover
-      border-radius: 8px
-      background: #f1f1f1
-      flex-shrink: 0
+  .cart-item-actions {
+    @apply flex gap-3 items-center flex-shrink-0;
+  }
 
-    &-details
-      display: flex
-      flex-direction: column
-      gap: 4px
-      flex: 1
-      min-width: 0
+  .counter-wrapper {
+    @apply flex gap-2 bg-gray-100 py-2 px-3 rounded items-center;
+  }
 
-    &-name
-      font-weight: bold
-      font-size: 15px
-      overflow: hidden
-      text-overflow: ellipsis
-      white-space: nowrap
+  .counter-btn {
+    @apply bg-transparent border-0 cursor-pointer text-sm text-black/50 px-1 transition-colors font-bold select-none hover:text-[#d87d4a] disabled:opacity-30 disabled:cursor-not-allowed;
+  }
 
-    &-price
-      color: #00000080
-      font-size: 14px
+  .counter-value {
+    @apply min-w-[20px] text-center font-bold text-[13px];
+  }
 
-    &-actions
-      display: flex
-      gap: 12px
-      align-items: center
-      flex-shrink: 0
-
-  .counter
-    &-wrapper
-      display: flex
-      gap: 8px
-      background: #f1f1f1
-      padding: 8px 12px
-      border-radius: 4px
-      align-items: center
-
-    &-btn
-      background: none
-      border: none
-      cursor: pointer
-      font-size: 14px
-      color: #00000080
-      padding: 0 4px
-      transition: color 0.2s
-      font-weight: bold
-      user-select: none
-      &:hover
-        color: #d87d4a
-      &:disabled
-        opacity: 0.3
-        cursor: not-allowed
-
-    &-value
-      min-width: 20px
-      text-align: center
-      font-weight: bold
-      font-size: 13px
-
-  .remove-item-btn
-    background: none
-    border: none
-    cursor: pointer
-    color: #00000060
-    padding: 4px
-    transition: color 0.2s
-    font-size: 12px
-    text-transform: uppercase
-    letter-spacing: 0.5px
-    &:hover
-      color: #d87d4a
+  .remove-item-btn {
+    @apply bg-transparent border-0 cursor-pointer text-black/40 p-1 transition-colors text-xs uppercase tracking-wide hover:text-[#d87d4a];
+  }
 </style>
 
 <script>
@@ -360,7 +285,7 @@ import Button from "../atoms/Button.astro";
   function closeCart() {
     cartModal.style.display = "none";
     cartIcon.setAttribute("aria-expanded", "false");
-    cartIcon.focus(); // Return focus to cart button
+    cartIcon.focus();
   }
 
   cartIcon.addEventListener("click", (e: MouseEvent) => {
