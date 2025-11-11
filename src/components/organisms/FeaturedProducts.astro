@@ -7,17 +7,16 @@ import FeaturedProductCard from "../molecules/FeaturedProductCard.astro";
 
 <section aria-labelledby="featured-products">
   <h2 id="featured-products" class="sr-only">Featured Products</h2>
-  <div class="container grid grid-cols-1 gap-8 mb-20 place-items-center">
+  <div class="container grid grid-cols-1 place-items-center">
     <FeaturedProductCard
       image={makhana}
       imageAlt="makhana"
       title="Makhana"
-      class="item-image"
     >
-      <a class="pb-2" href="/category/makhana"><Button>Shop →</Button></a>
+      <a class="p-2" href="/category/makhana"><Button>Shop →</Button></a>
     </FeaturedProductCard>
     <FeaturedProductCard image={sattu} imageAlt="sattu" title="Sattu">
-      <a class="pb-2" href="/category/sattu"><Button>Shop →</Button></a>
+      <a class="p-2" href="/category/sattu"><Button>Shop →</Button></a>
     </FeaturedProductCard>
   </div>
 </section>
