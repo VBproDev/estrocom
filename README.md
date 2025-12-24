@@ -26,7 +26,7 @@ If you want a custom store built, or help setting up this template, I can handle
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 ├── public/
