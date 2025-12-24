@@ -40,6 +40,20 @@ If you want a custom store built, or help setting up this template, I can handle
 ---
 
 ## Getting Started
+Ensure you have [Node](https://nodejs.org/en) and [Git][https://git-scm.com/] installed.
+
+Cloning the repo
+```
+git clone https://github.com/VBproDev/estrocom.git
+```
+
+Installing and updating the dependencies (this can take 5 -15 minutes)-
+```
+npm install
+npm update
+```
+
+# Customise
 
 1. **Add your products**  
    Edit `src/utils/productData.js` with your product details.  
