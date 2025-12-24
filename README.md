@@ -1,8 +1,81 @@
-# Estrocom
+<h1 align="center">Estrocom</h1>
 
-A fully responsive, SEO-friendly, WCAG-compliant, and high-performance e-commerce template for businesses. The demo showcases a store for foxnut and roasted gram flour, but it can be adapted for any product. Built with Astro, Tailwind CSS, and TypeScript.
+<p align="center"> <img src="https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white" alt="Astro" /> <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/Accessibility-005A9C?style=for-the-badge&logo=w3c&logoColor=white" alt="WCAG" /> </p>
 
-[View live site here](https://estrocom.netlify.app/)
+Estrocom is a production ready e-commerce template built for responsiveness, SEO, WCAG accessibility, and high-performance. The demo showcases a functioning store for foxnut and roasted gram flour, but it can be adapted for any product.
+
+<div align="center"><a href="https://estrocom.netlify.app">View live demo</a></div>
+
+## Proven Performance, Accessibility & Responsiveness
+ You don't need to take our word for it.
+
+### Accessibility (WCAG-focused)
+- 0 accessibility issues detected by Axe
+- WCAG AA color contrast maintained in each page
+- Tested using axe DevTools with best practices enabled
+
+![axe accessibility report – 0 issues](https://iili.io/fG19k3g.png)
+
+### Performance
+- Sub-1s load time
+- Excellent Lighthouse scores across performance metrics
+
+![Lighthouse performance report](https://iili.io/fG1Jxef.png)
+
+### Mobile-first & Responsive
+- Designed mobile-first
+- Fully responsive across breakpoints
+
+<p align="center">
+  <img src="https://iili.io/fG1dWuf.png" alt="Mobile-first responsive homepage" width="300" />
+</p>
+
+---
+
+## Key Features
+
+- JSON-LD Schema: Includes Structured Data so your products look great in Google search results.
+
+- Full Shopping Flow: Integrated cart functionality and product categorization.
+
+- Mobile-First: Works down to widths of 360px.
+
+- Atomic Design: Scalable architecture using Atoms, Molecules, and Organisms.
+
+## Getting Started
+Ensure you have [Node](https://nodejs.org/en) and [Git](https://git-scm.com/) installed.
+
+Cloning the repo
+```
+git clone https://github.com/VBproDev/estrocom.git
+```
+
+Installing and updating the dependencies-
+```
+npm install
+npm update
+```
+
+# Customise
+
+Estrocom is config driven by default.
+
+1. **Add your products**  
+   Edit `src/utils/productData.js` with your product details.  
+
+2. **Replace images**  
+   Swap the placeholders in `public/assets/` with your own images.  
+
+3. **Update categories & product pages**  
+   Edit the frontmatter in `src/pages/category/` and `src/pages/products/`.  
+
+4. **Customize homepage**  
+   Edit `src/pages/index.astro` to showcase your story.  
+
+5. **Update theme colors**
+   Edit `colors.js`, `sizing.js`, `typography.js` from `src/design-system` to reflect your branding.
+
+Want me to build it for you? [Email me](mailto:proshowspeed@gmail.com) and I’ll set up your store quickly.
 
 ---
 
@@ -10,7 +83,7 @@ A fully responsive, SEO-friendly, WCAG-compliant, and high-performance e-commerc
 
 Hi! I’m Viraj Bijpuria, a developer specializing in modern, fast, and accessible e-commerce solutions. I help businesses launch online stores that look great, perform well, and attract customers.  
 
-If you want a custom store built, or help setting up this template, I can handle everything from design to deployment, from SEO to a11y, from payment integrations to delivery integrations.
+If you want a custom store built, or help setting up this template, I can handle everything from design to deployment, from SEO to a11y, from payment to delivery integrations.
 
 [Contact me](mailto:proshowspeed@gmail.com) to get started.
 
@@ -36,38 +109,6 @@ If you want a custom store built, or help setting up this template, I can handle
 
 
 [Learn more about Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
-
----
-
-## Getting Started
-Ensure you have [Node](https://nodejs.org/en) and [Git](https://git-scm.com/) installed.
-
-Cloning the repo
-```
-git clone https://github.com/VBproDev/estrocom.git
-```
-
-Installing and updating the dependencies (this can take 5 -15 minutes)-
-```
-npm install
-npm update
-```
-
-# Customise
-
-1. **Add your products**  
-   Edit `src/utils/productData.js` with your product details.  
-
-2. **Replace images**  
-   Swap the placeholders in `public/assets/` with your own images.  
-
-3. **Update categories & product pages**  
-   Edit the frontmatter in `src/pages/category/` and `src/pages/products/`.  
-
-4. **Customize homepage**  
-   Edit `src/pages/index.astro` to showcase your story.  
-
-Want me to build it for you? [Reach out](mailto:proshowspeed@gmail.com) and I’ll set up your store quickly.
 
 ---
 
