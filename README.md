@@ -8,21 +8,11 @@ A fully responsive, SEO-friendly, WCAG-compliant, and high-performance e-commerc
 
 ## 💡 About Me
 
-Hi! I’m **[Your Name]**, a developer specializing in modern, fast, and accessible e-commerce solutions. I help businesses launch online stores that look great, perform well, and attract customers.  
+Hi! I’m Viraj Bijpuria, a developer specializing in modern, fast, and accessible e-commerce solutions. I help businesses launch online stores that look great, perform well, and attract customers.  
 
 If you want a custom store built, or help setting up this template, I can handle everything from design to deployment, from SEO to a11y, from payment integrations to delivery integrations.
 
 [Contact me](mailto:proshowspeed@gmail.com) to get started.
-
----
-
-## Project Highlights
-
-- Fully **responsive** and mobile-friendly  
-- **WCAG-compliant** for accessibility  
-- **SEO-optimized** for better visibility  
-- Built with **Astro, Tailwind, and TypeScript**  
-- **Atomic Design** structure for scalable and maintainable code  
 
 ---
 
