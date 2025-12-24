@@ -40,7 +40,7 @@ If you want a custom store built, or help setting up this template, I can handle
 ---
 
 ## Getting Started
-Ensure you have [Node](https://nodejs.org/en) and [Git][https://git-scm.com/] installed.
+Ensure you have [Node](https://nodejs.org/en) and [Git](https://git-scm.com/) installed.
 
 Cloning the repo
 ```
