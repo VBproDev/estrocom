@@ -1,42 +1,79 @@
-# Astro-commerce
+# Estrocom
 
-An ecommerce template for small bussiness. Although this template showcases a store for audio devices, it could be used showcase any type of product.
+A fully responsive, SEO-friendly, WCAG-compliant, and high-performance e-commerce template for businesses. The demo showcases a store for foxnut and roasted gram flour, but it can be adapted for any product. Built with Astro, Tailwind CSS, and TypeScript.
 
-[View live site here](https://astro-commerce-eight.vercel.app/)
+[View live site here]()
 
-## 🚀 Project Structure
+---
 
-The project follows the atomic design structure [Learn more](https://bradfrost.com/blog/post/atomic-web-design/)
+## 💡 About Me
 
-Inside of this project, you'll see the following folders and files. They make up the main parts of the project.
+Hi! I’m **[Your Name]**, a developer specializing in modern, fast, and accessible e-commerce solutions. I help businesses launch online stores that look great, perform well, and attract customers.  
 
-```text
+If you want a custom store built, or help setting up this template, I can handle everything from design to deployment, from SEO to a11y, from payment integrations to delivery integrations.
 
+[Contact me](mailto:proshowspeed@gmail.com) to get started.
+
+---
+
+## Project Highlights
+
+- Fully **responsive** and mobile-friendly  
+- **WCAG-compliant** for accessibility  
+- **SEO-optimized** for better visibility  
+- Built with **Astro, Tailwind, and TypeScript**  
+- **Atomic Design** structure for scalable and maintainable code  
+
+---
+
+## 🗂 Project Structure
+
+```
 ├── public/
-│   ├── assets/
-│   │   └── All images used.
-│   └── favicon.svg
+│ ├── assets/ # All images used
+│ └── favicon.svg
 ├── src/
-│   ├── components/
-│   │   └── atoms
-│   │   ├── molecules
-│   │   ├── organisms
-│   ├── design-system/
-│   ├── layouts/
-│   ├── pages/
-│   └── utils/
+│ ├── components/
+│ │ ├── atoms
+│ │ ├── molecules
+│ │ └── organisms
+│ ├── design-system/
+│ ├── layouts/
+│ ├── pages/
+│ └── utils/
 └── package.json
 ```
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+[Learn more about Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
+
+---
+
+## Getting Started
+
+1. **Add your products**  
+   Edit `src/utils/productData.js` with your product details.  
+
+2. **Replace images**  
+   Swap the placeholders in `public/assets/` with your own images.  
+
+3. **Update categories & product pages**  
+   Edit the frontmatter in `src/pages/category/` and `src/pages/products/`.  
+
+4. **Customize homepage**  
+   Edit `src/pages/index.astro` to showcase your story.  
+
+Want me to build it for you? [Reach out](mailto:proshowspeed@gmail.com) and I’ll set up your store quickly.
+
+---
+
+## Commands
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm install`             | Install dependencies                             |
+| `npm run dev`             | Start local server at `localhost:4321`          |
+| `npm run build`           | Build production site in `./dist/`              |
+| `npm run preview`         | Preview your production build locally           |
+| `npm run astro ...`       | Run Astro CLI commands like `astro add` or `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
