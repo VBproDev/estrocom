@@ -2,7 +2,7 @@
 
 A fully responsive, SEO-friendly, WCAG-compliant, and high-performance e-commerce template for businesses. The demo showcases a store for foxnut and roasted gram flour, but it can be adapted for any product. Built with Astro, Tailwind CSS, and TypeScript.
 
-[View live site here]()
+[View live site here](https://estrocom.netlify.app/)
 
 ---
 
