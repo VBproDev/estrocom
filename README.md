@@ -75,6 +75,9 @@ Estrocom is config driven by default.
 5. **Update theme colors**
    Edit `colors.js`, `sizing.js`, `typography.js` from `src/design-system` to reflect your branding.
 
+6. **Add your own sitemap**
+   Edit `public/sitemap.xml` to reflect your site's link graph. You can use [this free tool here](www.xml-sitemaps.com)
+
 Want me to build it for you? [Email me](mailto:proshowspeed@gmail.com) and I’ll set up your store quickly.
 
 ---
