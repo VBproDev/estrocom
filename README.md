@@ -34,7 +34,7 @@ Estrocom is a production ready e-commerce template built for responsiveness, SEO
 
 ## Key Features
 
-- JSON-LD Schema: Includes Structured Data so your products look great in Google search results.
+- JSON-LD Schema and sitemap: Your products get indexed and look great in Google search results.
 
 - Full Shopping Flow: Integrated cart functionality and product categorization.
 
