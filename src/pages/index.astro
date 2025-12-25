@@ -11,7 +11,7 @@ import SattuBenefits from "../components/molecules/SattuBenefits.astro";
 import FeaturedProducts from "../components/organisms/FeaturedProducts.astro";
 import Footer from "../components/organisms/Footer.astro";
 import { Image } from "astro:assets";
-import heroImage from "../../public/assets/shared/hero-banner.jpg";
+import heroImage from "../../public/assets/shared/hero-banner.webp";
 import CategoryCards from "../components/molecules/CategoryCards.astro";
 
 const promises = [
@@ -19,18 +19,17 @@ const promises = [
     icon: "🌱",
     title: "Farm-to-Table Transparency",
     text: `Know exactly where your food comes from. We work with verified
-            farmers, ensuring fair wages and sustainable practices. No
-            middlemen, no mysteries.`,
+            farmers, ensuring fair wages and sustainable practices.`,
   },
   {
-    icon: "✨",
+    icon: "🧂",
     title: "Nothing Added, Nothing Removed",
     text: `No preservatives and artificial colors. With the same purity your
             great-grandmother would approve of, because real food doesn't need
             a chemistry degree to understand.`,
   },
   {
-    icon: "💚",
+    icon: "🛡️",
     title: "Your Wellness, Our Mission",
     text: `Every product is tested for quality and packed with care. We stand
             behind everything we sell. If it's not good enough for our family,
@@ -45,7 +44,10 @@ const promises = [
        =========================== -->
   <Fragment slot="head">
     <!-- Google site verification, remove when you're deploying -->
-    <meta name="google-site-verification" content="qfzcIgeEbwcAFbe9ubTMYGoEy7E_owtyBVKSl4Ie_OI" />
+    <meta
+      name="google-site-verification"
+      content="qfzcIgeEbwcAFbe9ubTMYGoEy7E_owtyBVKSl4Ie_OI"
+    />
 
     <script type="application/ld+json">
       {
@@ -62,7 +64,7 @@ const promises = [
           "url": "https://www.farmpure.net/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.farmpure.net/assets/shared/logo.png"
+            "url": "https://www.farmpure.net/assets/shared/logo.webp"
           },
           "sameAs": [
             "https://www.facebook.com/people/Farm-Pure/61566574773069/",
@@ -87,19 +89,19 @@ const promises = [
               "name": "Sattu Category",
               "description": "Explore Farmpure's Sattu range, traditional, protein-rich roasted gram products.",
               "url": "https://www.farmpure.net/category/sattu",
-              "image": "https://www.farmpure.net/assets/exported/sattu.jpg"
+              "image": "https://www.farmpure.net/assets/exported/sattu.webp"
             },
             {
               "@type": "CollectionPage",
               "name": "Makhana Category",
               "description": "Shop our Makhana range, natural, healthy fox nuts packed with protein and antioxidants.",
               "url": "https://www.farmpure.net/category/makhana",
-              "image": "https://www.farmpure.net/assets/exported/makhana.png"
+              "image": "https://www.farmpure.net/assets/exported/makhana.webp"
             }
           ],
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://www.farmpure.net/assets/shared/hero-banner.jpg",
+            "url": "https://www.farmpure.net/assets/shared/hero-banner.webp",
             "caption": "Assortment of traditional Indian superfoods including makhana and sattu"
           }
         }
@@ -111,13 +113,17 @@ const promises = [
        HERO SECTION
        =========================== -->
   <Hero>
-    <div class="bg-gradient-to-br from-white to-green-50 overflow-hidden relative">
+    <div
+      class="bg-gradient-to-br from-white to-green-50 overflow-hidden relative"
+    >
       <div class="mx-auto max-w-7xl px-4 pt-6">
         <div class="grid items-center gap-12 md:grid-cols-2">
           <!-- Left: Hero Text Content -->
           <div class="flex flex-col text-center md:items-start md:text-left">
             <div class="inline-block">
-              <span class="animate-pulse rounded-full bg-green-50 px-4 py-2 text-sm font-semibold text-green-700">
+              <span
+                class="animate-pulse rounded-full bg-green-50 px-4 py-2 text-sm font-semibold text-green-700"
+              >
                 🌱 Pure & Natural
               </span>
             </div>
@@ -128,7 +134,9 @@ const promises = [
               className="hero-title pt-4 pb-4 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl"
             >
               India's Heritage,<br />
-              <span class="bg-gradient-to-r from-green-500 to-amber-500 bg-clip-text text-transparent">
+              <span
+                class="bg-gradient-to-r from-green-500 to-amber-500 bg-clip-text text-transparent"
+              >
                 Your Health
               </span>
             </Text>
@@ -139,9 +147,12 @@ const promises = [
                 color={colors.gray}
                 className="max-w-xl text-lg leading-relaxed md:text-xl"
               >
-                For generations, our grandmothers knew the secret to lasting health. 
-                <strong>At Farmpure</strong>, we're bringing back these time-tested treasures, 
-                sourced directly from farmers who still honor tradition, ensuring every bite connects you to India's wellness wisdom.
+                For generations, our grandmothers knew the secret to lasting
+                health.
+                <strong>At Farmpure</strong>, we're bringing back these
+                time-tested treasures, sourced directly from farmers who still
+                honor tradition, ensuring every bite connects you to India's
+                wellness wisdom.
               </Text>
             </div>
 
@@ -225,7 +236,7 @@ const promises = [
                   >
                 </div>
                 <div class="flex items-center gap-2">
-                  <span class="text-2xl">🌾</span>
+                  <span class="text-2xl">🧂</span>
                   <span class="text-sm font-medium text-gray-800"
                     >Zero Additives</span
                   >
@@ -314,8 +325,7 @@ const promises = [
             The Farmpure Promise
           </Text>
           <Text type="body" color={colors.gray} className="mx-auto max-w-2xl">
-            We don't sell products, we deliver trust, transparency, and
-            tradition.
+            We deliver trust, transparency, and tradition.
           </Text>
         </div>
 

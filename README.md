@@ -14,20 +14,20 @@ Estrocom is a production ready e-commerce template built for responsiveness, SEO
 - WCAG AA color contrast maintained in each page
 - Tested using axe DevTools with best practices enabled
 
-![axe accessibility report – 0 issues](https://iili.io/fG19k3g.png)
+![axe accessibility report – 0 issues](https://iili.io/fG19k3g.webp)
 
 ### Performance
 - Sub-1s load time
 - Excellent Lighthouse scores across performance metrics
 
-![Lighthouse performance report](https://iili.io/fG1Jxef.png)
+![Lighthouse performance report](https://iili.io/fG1Jxef.webp)
 
 ### Mobile-first & Responsive
 - Designed mobile-first
 - Fully responsive across breakpoints
 
 <p align="center">
-  <img src="https://iili.io/fG1dWuf.png" alt="Mobile-first responsive homepage" width="300" />
+  <img src="https://iili.io/fG1dWuf.webp" alt="Mobile-first responsive homepage" width="300" />
 </p>
 
 ---

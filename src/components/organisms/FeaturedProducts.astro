@@ -1,18 +1,14 @@
 ---
 import Button from "../../components/atoms/Button.astro";
-import makhana from "../../../public/assets/exported/makhana.png";
-import sattu from "../../../public/assets/exported/sattu.jpg";
+import makhana from "../../../public/assets/exported/makhana.webp";
+import sattu from "../../../public/assets/exported/sattu.webp";
 import FeaturedProductCard from "../molecules/FeaturedProductCard.astro";
 ---
 
 <section aria-labelledby="featured-products">
   <h2 id="featured-products" class="sr-only">Featured Products</h2>
   <div class="container grid grid-cols-1 place-items-center">
-    <FeaturedProductCard
-      image={makhana}
-      imageAlt="makhana"
-      title="Makhana"
-    >
+    <FeaturedProductCard image={makhana} imageAlt="makhana" title="Makhana">
       <a class="p-2" href="/category/makhana"><Button>Shop →</Button></a>
     </FeaturedProductCard>
     <FeaturedProductCard image={sattu} imageAlt="sattu" title="Sattu">
