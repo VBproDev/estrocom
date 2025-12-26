@@ -34,7 +34,7 @@ Estrocom is a production ready e-commerce template built for responsiveness, SEO
 
 ## Key Features
 
-- JSON-LD Schema and sitemap: Your products get indexed and look great in Google search results.
+- JSON-LD Schema and automatic sitemap: Your products get indexed and look great in Google search results.
 
 - Full Shopping Flow: Integrated cart functionality and product categorization.
 
@@ -75,8 +75,8 @@ Estrocom is config driven by default.
 5. **Update theme colors**
    Edit `colors.js`, `sizing.js`, `typography.js` from `src/design-system` to reflect your branding.
 
-6. **Add your own sitemap**
-   Edit `public/sitemap.xml` to reflect your site's link graph. You can use [this free tool here](www.xml-sitemaps.com)
+6. **Add your domain**
+   In `astro.config.mjs`, modify the `domain` variable to reflect your's site's root.
 
 Want me to build it for you? [Email me](mailto:proshowspeed@gmail.com) and I’ll set up your store quickly.
 
