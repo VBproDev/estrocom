@@ -54,6 +54,8 @@ const categoryContent = {
 
 const content = categoryContent[type];
 
+const description = `Explore Farmpure's range of ${categoryName} products, pure, natural, and rich in nutrition.`
+
 /* ============================
    STRUCTURED DATA FOR SEO
    ============================ */
@@ -63,7 +65,7 @@ const structuredData = JSON.stringify(
         "@type": "CollectionPage",
         name: `${categoryName} | Farmpure`,
         url: `https://www.farmpure.net/category/${type}`,
-        description: `Explore Farmpure's range of ${categoryName} products, pure, natural, and rich in nutrition.`,
+        description,
         inLanguage: "en-IN",
         isPartOf: {
             "@type": "WebSite",
@@ -114,7 +116,8 @@ const structuredData = JSON.stringify(
 );
 ---
 
-<Layout title=`Farmpure ${categoryName} Products Catalog`>
+<Layout title=`Farmpure ${categoryName} Products Catalog` description={description}>
+    
     <Fragment slot="head">
         <script type="application/ld+json" set:html={structuredData} />
     </Fragment>

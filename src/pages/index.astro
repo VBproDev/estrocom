@@ -14,6 +14,8 @@ import { Image } from "astro:assets";
 import heroImage from "../../public/assets/shared/hero-banner.webp";
 import CategoryCards from "../components/molecules/CategoryCards.astro";
 
+const description = "Farmpure offers India's heritage of healthy and natural foods like Sattu and Makhana. Pure, sustainable, and packed with nutrition."
+
 const promises = [
   {
     icon: "🌱",
@@ -36,9 +38,68 @@ const promises = [
             it won't reach yours.`,
   },
 ];
+
+const structuredData = JSON.stringify(
+  {
+    "@context": "https://schema.org",
+    "@type": ["WebSite", "OnlineStore"],
+    "name": "Farmpure",
+    "url": "https://www.farmpure.net/",
+    description,
+    "inLanguage": "en-IN",
+    "areaServed": "IN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Farmpure",
+      "url": "https://www.farmpure.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.farmpure.net/assets/shared/logo.webp"
+      },
+      "sameAs": [
+        "https://www.facebook.com/people/Farm-Pure/61566574773069/",
+        "https://in.linkedin.com/company/slb-overseas-llp",
+        "https://www.instagram.com/farmpureofficial/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8700522344",
+        "contactType": "Customer Service",
+        "areaServed": "IN",
+        "availableLanguage": "en"
+      }
+    },
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://www.farmpure.net/#home",
+      "name": "Home",
+      "about": [
+        {
+          "@type": "CollectionPage",
+          "name": "Sattu Category",
+          "description": "Explore Farmpure's Sattu range, traditional, protein-rich roasted gram products.",
+          "url": "https://www.farmpure.net/category/sattu",
+          "image": "https://www.farmpure.net/assets/exported/sattu.webp"
+        },
+        {
+          "@type": "CollectionPage",
+          "name": "Makhana Category",
+          "description": "Shop our Makhana range, natural, healthy fox nuts packed with protein and antioxidants.",
+          "url": "https://www.farmpure.net/category/makhana",
+          "image": "https://www.farmpure.net/assets/exported/makhana.webp"
+        }
+      ],
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.farmpure.net/assets/shared/hero-banner.webp",
+        "caption": "Assortment of traditional Indian superfoods including makhana and sattu"
+      }
+    }
+  }
+)
 ---
 
-<Layout title="Home of Farmpure | Sattu | Makhana">
+<Layout title="Home of Farmpure | Sattu | Makhana", description={description}>
   <!-- ===========================
        STRUCTURED DATA FOR SEO
        =========================== -->
@@ -51,64 +112,7 @@ const promises = [
 
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": ["WebSite", "OnlineStore"],
-        "name": "Farmpure",
-        "url": "https://www.farmpure.net/",
-        "description": "Farmpure offers India's heritage of healthy and natural foods like Sattu and Makhana. Pure, sustainable, and packed with nutrition.",
-        "inLanguage": "en-IN",
-        "areaServed": "IN",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Farmpure",
-          "url": "https://www.farmpure.net/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.farmpure.net/assets/shared/logo.webp"
-          },
-          "sameAs": [
-            "https://www.facebook.com/people/Farm-Pure/61566574773069/",
-            "https://in.linkedin.com/company/slb-overseas-llp",
-            "https://www.instagram.com/farmpureofficial/"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-8700522344",
-            "contactType": "Customer Service",
-            "areaServed": "IN",
-            "availableLanguage": "en"
-          }
-        },
-        "mainEntity": {
-          "@type": "WebPage",
-          "@id": "https://www.farmpure.net/#home",
-          "name": "Home",
-          "about": [
-            {
-              "@type": "CollectionPage",
-              "name": "Sattu Category",
-              "description": "Explore Farmpure's Sattu range, traditional, protein-rich roasted gram products.",
-              "url": "https://www.farmpure.net/category/sattu",
-              "image": "https://www.farmpure.net/assets/exported/sattu.webp"
-            },
-            {
-              "@type": "CollectionPage",
-              "name": "Makhana Category",
-              "description": "Shop our Makhana range, natural, healthy fox nuts packed with protein and antioxidants.",
-              "url": "https://www.farmpure.net/category/makhana",
-              "image": "https://www.farmpure.net/assets/exported/makhana.webp"
-            }
-          ],
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://www.farmpure.net/assets/shared/hero-banner.webp",
-            "caption": "Assortment of traditional Indian superfoods including makhana and sattu"
-          }
-        }
-      }
-    </script>
+    <script type="application/ld+json" set:html={structuredData} />
   </Fragment>
 
   <!-- ===========================
